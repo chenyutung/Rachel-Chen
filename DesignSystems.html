@@ -30,6 +30,590 @@
   /* display: none; */
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+    background-color: #F1C9CC;
+}
+
+body {
+  padding:5rem 0;
+}
+
+:root {
+  --wf-gray: #434E59;
+  --wf-light-gray: #E6ECF2;
+  --wf-bright-yellow: #F2BC1B;
+  --wf-medium-yellow: #CF9730;
+  --wf-medium-brown: #CF9730;
+  --wf-deep-brown: #736048;
+  --body-text-color: #976669;
+}
+
+/* Structure */
+
+
+main {
+  width:80vw;
+  margin: 0 auto;
+}
+
+#ds-container {
+  display:grid;
+  grid-template-columns: 3fr 7fr;
+  grid-auto-rows:min-content;
+  grid-gap:2rem;
+}
+
+.component-group {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows:min-content;
+  grid-gap:1rem;
+}
+
+.design-patterns-group {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows:min-content;
+  grid-gap:1rem;
+}
+
+
+
+#left-sidebar {
+  grid-column: 1 / 2;
+}
+
+#main-content {
+  grid-column: 2 / 4;
+}
+
+#right-sidebar {
+  grid-column: 3 / 4;
+}
+
+section {
+  background:#fff;
+  box-shadow: 3px 3px 2px 1px rgba(111, 111, 111, .2);
+  padding:2rem;
+  margin-bottom:2rem;
+}
+
+.cg-1 {
+  grid-column: 1 / 2;
+}
+
+.cg-2 {
+  grid-column: 2 / 3;
+}
+
+.cg-3 {
+  grid-column: 3 / 4;
+}
+
+.card-image {
+    background-color: #CCA1A4;
+    padding:1rem;
+}
+.card-image > img {
+    margin-bottom:1rem;
+}
+
+.profile-card {
+    background-color: #CCA1A4;
+    padding:1rem;
+}
+.profile-card > img {
+    margin-bottom:1rem;
+}
+
+
+.item {
+  grid-column:1;
+  border-top: 1px solid #CCA1A4;
+  padding: 1rem 0;
+}
+
+.definition {
+  grid-column:2;
+  border-top: 1px solid #CCA1A4;
+  padding: 1rem 0;
+}
+
+
+
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* Typography */
+
+.header {
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+  line-height:1;
+}
+
+h1 {
+  font-size:5rem;
+  margin-bottom:1.25rem;
+
+}
+h2 {
+  font-size:3.375rem;
+  margin-bottom:1.25rem;
+
+}
+h3 {
+  font-size:2.25rem;
+  margin-bottom:1rem;
+
+}
+h4 {
+  font-size:1.5rem;
+  margin-bottom:1rem;
+
+}
+h5 {
+  font-size:1;
+  margin-bottom:.5rem;
+
+}
+
+h6 {
+  font-size:1rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom:1rem;
+  color:var(--body-text-color);
+}
+
+.section-label {
+  text-transform: uppercase;
+  font-weight:700;
+}
+
+.section-break {
+  text-transform: uppercase;
+  font-weight:700;
+  margin-top:3rem;
+}
+
+.text-white {
+  color:#fff;
+}
+
+.title {
+  font-style: italic;
+
+
+}
+
+/* Color samples */
+
+
+
+  .color-gray {
+    background-color: #F1C9CC;
+  }
+
+    .color-light-gray {
+    background-color: #F3D2D1;
+  }
+    .color-bright-yellow {
+    background-color: #F1C9CC;
+  }
+    .color-medium-yellow {
+    background-color: #CCA1A4;
+  }
+    .color-medium-brown {
+    background-color: #B18386;
+  }
+    .color-deep-brown {
+    background-color: #976669;
+  }
+
+
+.primary-hue {
+  display: flex;
+  padding:3rem 1rem;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;}
+
+.primary-hue > div {
+  width:33%;
+}
+
+.secondary-hue {
+  display: flex;
+  padding:1.5rem 1rem;
+  color: white;
+  font-family: 'Open Sans', sans-serif;}
+
+.secondary-hue > div {
+  width:33%;
+}
+
+.neutral-hue {
+  display: flex;
+  padding:1.5rem 1rem;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;}
+
+.neutral-hue > div {
+  width:33%;
+}
+
+.accent-hue {
+  display: flex;
+  padding:.5rem 1rem;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;}
+
+.accent-hue > div {
+  width:33%;
+}
+
+
+/* Components */
+
+
+/* -- buttons -- */
+
+.button {
+  background-color: #CCA1A4;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Noto Sans JP';
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #CCA1A4;
+  color: white;
+}
+
+.button1:hover {
+  background-color: #CCA1A4;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: #CCA1A4;
+  border: 2px solid #CCA1A4;
+}
+
+.button2:hover {
+  background-color: white;
+  color: #CCA1A4;
+  border: 2px solid #CCA1A4;
+}
+
+.button3 {
+  background-color: #CCA1A4;
+  color: white;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button3:hover {
+  background-color: #CCA1A4;
+  color: white;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* -- input field -- */
+
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #F2B138;
+  border-radius: 2px;
+  color: #A66312;
+
+}
+
+  /* -- dropdown -- */
+
+
+.dropbtn {
+  background-color: #CCA1A4;
+  box-shadow: 3px 3px 2px 1px rgba(22, 22, 22, .4);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #CCA1A4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #CCA1A4;
+}
+
+/* -- switch -- */
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #CCA1A4;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #CCA1A4;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* -- date picker -- */
+
+
+label {
+    display: block;
+    font: 1rem 'Open Sans', sans-serif;
+}
+
+input {
+    margin: .4rem 0;
+    border: 1px solid #CCA1A4;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+/* -- loader -- */
+
+
+.loader {
+  border: 16px solid #ccc;
+  border-radius: 50%;
+  border-top: 16px solid #CCA1A4;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+img {
+  width:100%;
+}
+
+
+/*-- sign up form --*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width:90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #CCA1A4;
+  outline: none;
+}
+
+hr {
+  border: 1px solid ;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #976669;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #434E59;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.sign-up-container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #name {
   position: absolute;
   color:white;
@@ -158,6 +742,172 @@
 
     <div id=title>Design Systems</idv> </a>
 
+
+        <main>
+      	<div id="ds-container">
+      		<div id="left-sidebar"><h2>Working Forces</h2>
+            <h4>Design principles</h4>
+            <p>Each piece is part of a greater whole and should contribute positively to the system at scale. There should be no isolated features or outliers.</p>
+            <p>We’re focused when it comes to both design and functionality. Our work should speak boldly and clearly to this focus.</p>
+            <p>Design should reinforce the meaning of content, not distract from it. We prioritize worthwhile communication over decoration. If an aspect of the design doesn’t enhance the content, we should remove it.</p>
+            <p>Our use of motion breathes life into our products, and allows us to communicate with users in easily understood ways.</p>
+            <p>We create sites to welcome the widest possible audience, free of obstacles. Be mindful of the broad range of human abilities and disabilities, as well as the variety of devices, browsers, and networks people use to access our sites.</p></div>
+      		<div id="main-content">
+            <section>
+              <h3 class="section-label">Adjustments</h3>
+              <div>
+              <label>Change Background</label>
+              <button type="button" onclick="changeBodyBg('#A66312');">WF Medium Brown</button>
+              <button type="button" onclick="changeBodyBg('#CF9730');">WF Medium Yellow</button>
+              <button type="button" onclick="changeBodyBg('#E6ECF2');">WF Light Gray</button>
+              <button type="button" onclick="changeBodyBg('#FFF');">White</button>
+
+          </div>
+          <br>
+          <div>
+              <label>Change Heading text color</label>
+              <button type="button" onclick="changeHeaderColor('#434E59');">WF Gray</button>
+              <button type="button" onclick="changeHeaderColor('#F2BC1B');">WF Bright Yellow</button>
+              <button type="button" onclick="changeHeaderColor('#E6ECF2');">WF Light Gray</button>
+              <button type="button" onclick="changeHeaderColor('#A66312');">WF Medium Brown</button>
+
+          </div>
+            <div>
+              <label>Change Section Background</label>
+              <button type="button" onclick="changeSectionBG('#736048');">WF Deep Brown</button>
+              <button type="button" onclick="changeSectionBG('#CF9730');">WF Medium Yellow</button>
+              <button type="button" onclick="changeSectionBG('#E6ECF2');">WF Light Gray</button>
+              <button type="button" onclick="changeSectionBG('#fff');">White</button>
+
+          </div>
+            </section>
+            <section id="section">
+              <h3 class="section-label">Styles</h3>
+              <h4 class="section-break">Typography</h4>
+              <h1 class="header">H1 headline</h1>
+              <h2 class="header">H2 headline</h2>
+              <h3 class="header">H3 headline</h3>
+              <h4 class="header">H4 headline</h4>
+              <h5 class="header">H5 headline</h5>
+              <p>This is what body copy looks like. Strategic design means designing for a specific objective. More often than not, that objective is growing a business. But it’s important to recognize that there’s a difference between being strategic by being the conduit between the business and the user, and designing for the business alone.</p>
+
+              <h4 class="section-break">Colors</h4>
+              <div class="primary-hue color-gray"><div>WF Gray</div><div>#8D9AA6<br></div></div>
+              <div class="primary-hue color-light-gray"><div>WF Light Gray</div><div>#CEE1F2<br></div></div>
+              <div class="secondary-hue color-medium-brown"><div>WF Medium Brown</div><div>#A66312<br></div></div>
+              <div class="secondary-hue color-deep-brown"><div>WF Deep Brown</div><div>#736048<br></div></div>
+              <div class="secondary-hue color-medium-yellow"><div>WF Medium Yellow</div><div>#CF9730<br></div></div>
+              <div class="accent-hue color-bright-yellow"><div>WF Bright Yellow</div><div>#F2BC1B<br></div></div>
+            </section>
+            <section>
+              <h3 class="section-label">Components</h3>
+              <div class="component-group">
+                <article class="cg-1">
+                  <button class="button button1">Primary</button>
+                  <button class="button button2">Secondary</button>
+                  <button class="button button3">Disabled</button>
+              </article>
+              <article class="cg-2">
+                <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname">
+                </form>
+              </article>
+              <article class="cg-3">
+                <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                 <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                   </div>
+                </div>
+              </article>
+                <article class="cg-1">
+                  <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                  </label>
+              </article>
+              <article class="cg-2">
+               <label for="start">Start date:</label>
+                <input type="date" class="pointer" id="start" name="trip-start"
+             value="2020-02-21"
+             min="2018-01-01" max="2020-11-07">
+              </article>
+              <article class="cg-3">
+                <div class="loader"></div>
+                </article>
+            </section>
+             <section>
+              <h3 class="section-label">Design patterns</h3>
+              <div class="design-patterns-group">
+                  <article>
+                    <h4>Card with image</h4>
+                    <div class="card-image">
+                      <img src="../img/symbiotic-seeing-2.jpg" />
+                      <h3>This is the card headline</h3>
+                      <p>Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
+                    </div>
+                  </article>
+                  <article>
+                    <h4>Profile card</h4>
+                    <div class="profile-card">
+                      <img src="../img/profile-pic.jpg" />
+                      <h5 class="profile-name text-white">Diane Smith</h5>
+                      <p class="title text-white">Campaign Supervisor</p>
+                      <p class="text-white">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                      <button class="button button1">Contact Diane</button>
+
+                    </div>
+                  </article>
+                  <article>
+                    <h4>Sign up form</h4>
+                    <form action="/action_page.php" style="border:1px solid #A66312">
+        <div class="sign-up-container">
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+                  </article>
+                   <article>
+                    <h4>Profile card</h4>
+                    <div class="profile-card">
+                      <img src="../img/profile-pic.jpg" />
+                      <h5 class="profile-name text-white">Diane Smith</h5>
+                      <p class="title text-white">Campaign Supervisor</p>
+                      <p class="text-white">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                      <button class="button button1">Contact Diane</button>
+
+                    </div>
+                  </article>
+              </div>
+            </section>
+          </div>
+      	</div>
+        </main>
 
     <!-- <span></span>
     <div></div>
